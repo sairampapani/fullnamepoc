@@ -1,0 +1,12 @@
+//Groovy Scripts for model.EmployeesView
+
+package model
+
+import oracle.jbo.script.annotation.TransientValueExpression;
+
+@TransientValueExpression(attributeName="FullName")
+def FullName_ExpressionScript_Expression()
+{
+getFirstName() + " " + getLastName()
+}
+
